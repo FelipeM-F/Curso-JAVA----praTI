@@ -138,11 +138,5 @@ public class Turma
         double resultadoDouble = Double.parseDouble(resultadoFormatado);
         turma += "\nMédia da Turma "+ identTurma + " : " + resultadoDouble;
         return turma+"\n";
-        /*return  " Turma=" + identTurma +
-                "\n aluno01=" + aluno01 +
-                "\n aluno02=" + aluno02 +
-                "\n aluno03=" + aluno03 +
-                "\n aluno04=" + aluno04 +
-                "\n aluno05=" + aluno05;*/
     }
 }
