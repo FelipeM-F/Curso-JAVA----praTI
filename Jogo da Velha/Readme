@@ -1,0 +1,12 @@
+Exercicio
+Utilizando um array ou matriz bidimensional, crie um jogo da velha.
+
+1	2	3
+4	5	6
+7	8	9
+No inicio o jogo deverá aparecer desta forma. Se o jogador 1 digitar 5 e o jogador 2 digitar 1. Deverá ficar assim:
+
+O	2	3
+4	X	6
+7	8	9
+Ao final do jogo imprimir quem foi o vencedor ou se deu velha.
