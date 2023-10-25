@@ -20,5 +20,6 @@ IMC de 25 a 29,9: Sobrepeso;
 IMC de 30 a 34,9: Obesidade grau 1;
 IMC de 35 a 39,9: Obesidade grau 2;
 IMC acima de 40: Obesidade grau 3 (obesidade mórbida).
+
 Vamos ao desafio:
 Crie um programa em Java que solicite ao usuário que informe o peso em quilogramas e a altura em metros. Em seguida, utilize o cálculo do IMC para determinar o valor do IMC e exibir a classificação correspondente.
