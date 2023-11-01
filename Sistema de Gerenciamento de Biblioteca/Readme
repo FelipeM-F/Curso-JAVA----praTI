@@ -27,3 +27,17 @@ Adicione os livros à biblioteca.
 Liste todos os livros.
 Liste todas as categorias.
 Busque livros de uma categoria específica.
+
+Atualização do código conforme intruções:
+
+Um usuário só pode pegar até 5 livros por vez.
+O livro deve estar disponível na biblioteca (não pode estar emprestado por outro usuário).
+passo-a-passo
+
+Crie exceções personalizadas para os seguintes cenários:
+LimiteLivrosExcedidoException: Quando um usuário tenta pegar mais de 5 livros.
+LivroIndisponivelException: Quando o livro solicitado já está emprestado.
+Implemente a classe Biblioteca que deve conter:
+Uma lista de livros disponíveis.
+Um método emprestarLivro que aceita o nome do livro e o empresta ao usuário, se possível. Caso contrário, lança uma das exceções personalizadas.
+Teste sua implementação no método main tentando emprestar livros e tratando as possíveis exceções.

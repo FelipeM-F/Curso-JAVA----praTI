@@ -6,16 +6,23 @@ import java.util.Set;
 public class Biblioteca {
     private List<Livro> acervo;
     private Set<String> categorias;
+    private List<Usuario> usuarios;
 
     public Biblioteca()
     {
         this.acervo = new ArrayList<>();
         this.categorias = new HashSet<>();
+        this.usuarios = new ArrayList<>();
     }
     public void adicionarLivro(Livro livro)
     {
         this.acervo.add(livro);
         this.categorias.add(livro.getCategoria());
+    }
+    public void adicionarUsuario(Usuario usuario)
+    {
+
+        this.usuarios.add(usuario);
     }
     public void removerLivro(Livro livro)
     {
@@ -36,6 +43,14 @@ public class Biblioteca {
                 removerLivro(livro);
                 break;
             }
+        }
+    }
+
+    public void listarUsuarios()
+    {
+        for (Usuario usuario : this.usuarios)
+        {
+            System.out.println(usuario);
         }
     }
     public void listarLivros()
@@ -72,6 +87,28 @@ public class Biblioteca {
             }
         }
         return false;
+    }
+
+    public boolean isLivroEmprestado(Livro livro) {
+        return livro.livroEmprestado;
+    }
+
+    public void emprestarLivro (Usuario usuario, Livro livro) {
+        if(isLivroEmprestado(livro) == true)
+        {
+            throw new LivroIndisponivelException();
+        }
+        if(usuario.livrosEmprestados.size() < 5)
+        {
+            usuario.livrosEmprestados.add(livro);
+            livro.livroEmprestado = true;
+        }
+        else throw new LimiteLivrosExcedidoException();
+
+    }
+    public void devolverLivro(Usuario usuario, Livro livro) {
+        usuario.livrosEmprestados.remove(livro);
+        livro.livroEmprestado = false;
     }
 }
 
