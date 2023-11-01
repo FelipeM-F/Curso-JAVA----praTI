@@ -1,0 +1,9 @@
+Exercicio
+Crie uma classe Artigo com os atributos: titulo (string) e dataPublicacao em algum tipo de data
+
+Crie uma classe Jornal que tenha como atributo estático e final uma lista de Artigos.
+
+Deverá ter no mínimo 7 artigos.
+Os artigos deverão ter titulos e datas de publicações váriadas.
+Na classe Jornal, crie um método estatico que recebe dois parametros: de e até. Este método deverá retornar os artigos que se enquadrem nas data do parametro:
+exemplo: public static List buscarPorData(TipoData de, TipoData até)
